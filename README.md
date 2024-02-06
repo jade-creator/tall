@@ -2,7 +2,7 @@
 
 ## Tech Stack
 
-**Client:** Tailwind Alpine Livewire Laravel
+**Client:** Tailwind Alpine Livewire Laravel Vue
 
 **Server:** Laravel 10
 

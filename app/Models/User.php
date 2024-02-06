@@ -58,4 +58,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+
+    /** @return \Illuminate\Database\Eloquent\Relations\HasMany<\App\Models\Dog>*/
+    public function dogs(): HasMany
+    {
+        return $this->hasMany(Dog::class);
+    }
 }

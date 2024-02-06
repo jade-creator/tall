@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DogController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +29,12 @@ Route::middleware([
     })->name('dashboard');
 
     Route::resource('posts', PostController::class);
+
+    Route::prefix('dogs')
+        ->as('dogs.')
+        ->group(function () {
+            Route::get('list', [DogController::class, 'list'])->name('list');
+            Route::post('', [DogController::class, 'store'])->name('like');
+            Route::get('', [DogController::class, 'index'])->name('index');
+        });
 });
